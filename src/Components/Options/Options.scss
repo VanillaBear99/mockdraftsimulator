@@ -1,0 +1,42 @@
+.options-wrapper {
+  position: relative;
+
+  .options {
+    @include flexbox;
+    @include align-items(flex-start);
+  }
+  .options__btn {
+    margin: 62px 0px 36px 18px;
+  }
+
+  .back-to-choose {
+    position: fixed;
+    bottom: 18px;
+    left: 18px;
+    text-decoration: none;
+
+    &.ravens {
+      color: $ravens-purple;
+
+      &:hover {
+        color: lighten($ravens-purple, 10%);
+      }
+
+      .arrow-left {
+        @include css-triangle($ravens-purple, left);
+      }
+    }
+
+    &.redskins {
+      color: $redskins-burgundy;
+
+      &:hover {
+        color: lighten($redskins-burgundy, 10%);
+      }
+
+      .arrow-left {
+        @include css-triangle($redskins-burgundy, left);
+      }
+    }
+  }
+}
